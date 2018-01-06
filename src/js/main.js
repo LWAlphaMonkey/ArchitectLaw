@@ -102,7 +102,8 @@ var app = new Vue({
 });
 
 $('.chapter').click(function() {
-    var url = 'https://firebasestorage.googleapis.com/v0/b/buildingtechnicalregulations.appspot.com/o/' + $(this).attr('id') + '.json?alt=media';
+    //var url = 'https://firebasestorage.googleapis.com/v0/b/buildingtechnicalregulations.appspot.com/o/' + $(this).attr('id') + '.json?alt=media';
+    var url = 'json/' + $(this).attr('id') + '.json';
     $.getJSON(url, function(data){
         app.law_items = data.laws;
         app.chapter = data.chapter;
